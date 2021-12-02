@@ -7,15 +7,17 @@ export default function App() {
   const [result, setResult] = React.useState();
 
   React.useEffect(() => {
-    health().then(setResult);
-  }, []);
-
-  console.log(result);
+    health().then((res: any) => {
+      console.log('res', res);
+      setResult(res);
+    });
+  }, []); 
+  console.log('Results', result);
   if (result) {
     return (
       <View style={styles.container}>
-        <Text>Battery condition: {result?.health}</Text>
-        <Text>Temprature: {result?.temperature}</Text>
+        <Text>Battery health -  { result.health }</Text>
+        <Text>Battery temperature - { result.temperature }</Text>
       </View>
     );
   } else {

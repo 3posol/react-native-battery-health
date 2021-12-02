@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* BatteryHealth.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* BatteryHealth.m */; };
-		F4FF95D7245B92E800C19C63 /*  BatteryHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  BatteryHealth.swift */; };
-
+		CED0D6612758C4320065686F /* BatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0D6602758C4320065686F /* BatteryInfo.m */; };
+		F4FF95D7245B92E800C19C63 /* BatteryHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* BatteryHealth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +25,11 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libBatteryHealth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBatteryHealth.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
 		B3E7B5891CC2AC0600A0062D /* BatteryHealth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryHealth.m; sourceTree = "<group>"; };
+		CED0D6602758C4320065686F /* BatteryInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatteryInfo.m; sourceTree = "<group>"; };
+		CED0D6622758C7530065686F /* BatteryInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatteryInfo.h; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* BatteryHealth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BatteryHealth-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* BatteryHealth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryHealth.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +54,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
 				F4FF95D6245B92E800C19C63 /* BatteryHealth.swift */,
+				CED0D6602758C4320065686F /* BatteryInfo.m */,
+				CED0D6622758C7530065686F /* BatteryInfo.h */,
 				B3E7B5891CC2AC0600A0062D /* BatteryHealth.m */,
 				F4FF95D5245B92E700C19C63 /* BatteryHealth-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,10 +120,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				F4FF95D7245B92E800C19C63 /* BatteryHealth.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* BatteryHealth.m in Sources */,
-
+				CED0D6612758C4320065686F /* BatteryInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +234,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BatteryHealth;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "BatteryHealth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
@@ -259,10 +253,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BatteryHealth;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "BatteryHealth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};
