@@ -17,6 +17,11 @@ const BatteryHealth = NativeModules.BatteryHealth
       }
     );
 
-export function health() {
+export function health(): IBHealth {
   return BatteryHealth.getHealth();
+}
+
+export interface IBHealth {
+  health: number | string;
+  temperature: number;
 }
