@@ -24,4 +24,6 @@ export function health(): IBHealth {
 export interface IBHealth {
   health: number | string;
   temperature: number;
+  voltage: number;
+  capacity: number;
 }
