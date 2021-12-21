@@ -44,12 +44,12 @@ public class BatteryHealthModule extends ReactContextBaseJavaModule {
       int temperature = batteryStatus.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0);
       int voltage = batteryStatus.getIntExtra(BatteryManager.EXTRA_VOLTAGE, 0);
 
-      // BatteryManager bm = (BatteryManager) getReactApplicationContext().getSystemService(BATTERY_SERVICE);
-      // int capacity = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
+      BatteryManager bm = (BatteryManager) getReactApplicationContext().getSystemService(BATTERY_SERVICE);
+      int capacity = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
 
       WritableMap batteryInfo = Arguments.createMap();
       batteryInfo.putString("health", getBatteryHealthStatus(deviceHealth));
-     // batteryInfo.putInt("capacity", capacity);
+      batteryInfo.putInt("capacity", capacity);
       batteryInfo.putInt("voltage", voltage);
       batteryInfo.putDouble("temperature",  ((float) temperature) / 10);
 
