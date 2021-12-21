@@ -23,6 +23,8 @@
 
 @property (readonly) NSInteger batteryDesignCapacity;
 
+@property (readonly) NSInteger batteryCycleCount;
+
 @end
 
 #endif /* BatteryInfo_h */

@@ -51,6 +51,7 @@ public class BatteryHealthModule extends ReactContextBaseJavaModule {
       batteryInfo.putString("health", getBatteryHealthStatus(deviceHealth));
       batteryInfo.putInt("capacity", capacity);
       batteryInfo.putInt("voltage", voltage);
+      batteryInfo.putInt("cycleCount", 0);
       batteryInfo.putDouble("temperature",  ((float) temperature) / 10);
 
       promise.resolve(batteryInfo);

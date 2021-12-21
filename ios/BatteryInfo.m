@@ -44,4 +44,9 @@
     return [latestPowerDictionary[@"Voltage"] floatValue] / 1000.0;
 }
 
+- (NSInteger) batteryCycleCount
+{
+    return [latestPowerDictionary[@"CycleCount"] integerValue];
+}
+
 @end

@@ -14,6 +14,7 @@ class BatteryHealth: NSObject {
         response["temperature"] = instanceOfBatteryInfo.batteryTemperature();
         response["capacity"] = instanceOfBatteryInfo.batteryMaximumCapacity;
         response["voltage"] = instanceOfBatteryInfo.voltage;
+        response["cycleCount"] = instanceOfBatteryInfo.batteryCycleCount;
         response["designCapacity"] = instanceOfBatteryInfo.batteryDesignCapacity;
         resolve( response )
     }

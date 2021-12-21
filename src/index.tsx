@@ -26,4 +26,5 @@ export interface IBHealth {
   temperature: number;
   voltage: number;
   capacity: number;
+  cycleCount: number;
 }
