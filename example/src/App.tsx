@@ -8,11 +8,10 @@ export default function App() {
 
   React.useEffect(() => {
     health().then((res: any) => {
-      console.log('res', res);
+      console.log('res', JSON.stringify(res, null, 4));
       setResult(res);
     });
   }, []); 
-  console.log('Results', result);
   if (result) {
     return (
       <View style={styles.container}>
