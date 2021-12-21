@@ -39,4 +39,9 @@
     return [latestPowerDictionary[@"AppleRawMaxCapacity"] integerValue];
 }
 
+- (float) voltage
+{
+    return [latestPowerDictionary[@"Voltage"] floatValue] / 1000.0;
+}
+
 @end

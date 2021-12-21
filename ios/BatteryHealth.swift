@@ -9,11 +9,12 @@ class BatteryHealth: NSObject {
     @objc(getHealth:withRejecter:)
     func getHealth(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
         let instanceOfBatteryInfo = BatteryInfo();
-        var response = Dictionary<NSString, Float>()
+        var response = Dictionary<NSString, Any>()
         response["health"] = instanceOfBatteryInfo.batteryHealth();
         response["temperature"] = instanceOfBatteryInfo.batteryTemperature();
-        response["maximumCapacity"] = instanceOfBatteryInfo.batteryTemperature();
-        response["designCapacity"] = instanceOfBatteryInfo.batteryTemperature();
+        response["capacity"] = instanceOfBatteryInfo.batteryMaximumCapacity;
+        response["voltage"] = instanceOfBatteryInfo.voltage;
+        response["designCapacity"] = instanceOfBatteryInfo.batteryDesignCapacity;
         resolve( response )
     }
 }

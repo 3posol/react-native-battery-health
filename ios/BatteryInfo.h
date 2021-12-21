@@ -17,6 +17,8 @@
 
 - (float) batteryTemperature;
 
+- (float) voltage;
+
 @property (readonly) NSInteger batteryMaximumCapacity;
 
 @property (readonly) NSInteger batteryDesignCapacity;
